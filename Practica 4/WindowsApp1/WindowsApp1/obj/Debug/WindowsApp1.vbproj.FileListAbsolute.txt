@@ -1,0 +1,12 @@
+C:\ROBERTO 24650\Practica 4\WindowsApp1\WindowsApp1\bin\Debug\WindowsApp1.exe.config
+C:\ROBERTO 24650\Practica 4\WindowsApp1\WindowsApp1\bin\Debug\WindowsApp1.exe
+C:\ROBERTO 24650\Practica 4\WindowsApp1\WindowsApp1\bin\Debug\WindowsApp1.pdb
+C:\ROBERTO 24650\Practica 4\WindowsApp1\WindowsApp1\bin\Debug\WindowsApp1.xml
+C:\ROBERTO 24650\Practica 4\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.vbprojAssemblyReference.cache
+C:\ROBERTO 24650\Practica 4\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.Form1.resources
+C:\ROBERTO 24650\Practica 4\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.Resources.resources
+C:\ROBERTO 24650\Practica 4\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.vbproj.GenerateResource.cache
+C:\ROBERTO 24650\Practica 4\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.vbproj.CoreCompileInputs.cache
+C:\ROBERTO 24650\Practica 4\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.exe
+C:\ROBERTO 24650\Practica 4\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.xml
+C:\ROBERTO 24650\Practica 4\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.pdb
