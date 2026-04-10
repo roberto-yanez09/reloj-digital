@@ -45,11 +45,19 @@ Partial Class Form1
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Timer3 = New System.Windows.Forms.Timer(Me.components)
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.Temporizador = New System.Windows.Forms.Panel()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.picturebox, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.config.SuspendLayout()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Temporizador.SuspendLayout()
         Me.SuspendLayout()
         '
         'minutos
@@ -222,17 +230,18 @@ Partial Class Form1
         'tiempo
         '
         Me.tiempo.AutoSize = True
-        Me.tiempo.Location = New System.Drawing.Point(67, 73)
+        Me.tiempo.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tiempo.Location = New System.Drawing.Point(54, 70)
         Me.tiempo.Name = "tiempo"
-        Me.tiempo.Size = New System.Drawing.Size(31, 13)
+        Me.tiempo.Size = New System.Drawing.Size(135, 29)
         Me.tiempo.TabIndex = 1
-        Me.tiempo.Text = "0:0.0"
+        Me.tiempo.Text = "00:00:00.00"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(41, 4)
+        Me.Label3.Location = New System.Drawing.Point(54, 0)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(134, 25)
         Me.Label3.TabIndex = 0
@@ -240,6 +249,7 @@ Partial Class Form1
         '
         'Timer3
         '
+        Me.Timer3.Interval = 1
         '
         'PictureBox2
         '
@@ -253,11 +263,75 @@ Partial Class Form1
         Me.PictureBox2.TabIndex = 11
         Me.PictureBox2.TabStop = False
         '
+        'PictureBox3
+        '
+        Me.PictureBox3.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.PictureBox3.ErrorImage = CType(resources.GetObject("PictureBox3.ErrorImage"), System.Drawing.Image)
+        Me.PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), System.Drawing.Image)
+        Me.PictureBox3.Location = New System.Drawing.Point(144, 217)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(33, 36)
+        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox3.TabIndex = 12
+        Me.PictureBox3.TabStop = False
+        '
+        'Temporizador
+        '
+        Me.Temporizador.Controls.Add(Me.Button2)
+        Me.Temporizador.Controls.Add(Me.Button3)
+        Me.Temporizador.Controls.Add(Me.Label4)
+        Me.Temporizador.Controls.Add(Me.Label5)
+        Me.Temporizador.Location = New System.Drawing.Point(44, 253)
+        Me.Temporizador.Name = "Temporizador"
+        Me.Temporizador.Size = New System.Drawing.Size(236, 204)
+        Me.Temporizador.TabIndex = 11
+        Me.Temporizador.Visible = False
+        '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(149, 144)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(75, 23)
+        Me.Button2.TabIndex = 3
+        Me.Button2.Text = "start"
+        Me.Button2.UseVisualStyleBackColor = False
+        '
+        'Button3
+        '
+        Me.Button3.Location = New System.Drawing.Point(22, 144)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(75, 23)
+        Me.Button3.TabIndex = 2
+        Me.Button3.Text = "5min"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(81, 73)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(71, 29)
+        Me.Label4.TabIndex = 1
+        Me.Label4.Text = "00:00"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(54, 0)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(156, 25)
+        Me.Label5.TabIndex = 0
+        Me.Label5.Text = "Temporizador"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(304, 597)
+        Me.Controls.Add(Me.Temporizador)
+        Me.Controls.Add(Me.PictureBox3)
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.config)
@@ -278,6 +352,9 @@ Partial Class Form1
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Temporizador.ResumeLayout(False)
+        Me.Temporizador.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -304,4 +381,10 @@ Partial Class Form1
     Friend WithEvents tiempo As Label
     Friend WithEvents Timer3 As Timer
     Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents PictureBox3 As PictureBox
+    Friend WithEvents Temporizador As Panel
+    Friend WithEvents Button2 As Button
+    Friend WithEvents Button3 As Button
+    Friend WithEvents Label4 As Label
+    Friend WithEvents Label5 As Label
 End Class

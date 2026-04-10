@@ -135,14 +135,16 @@
 
 
     Private Sub reset_Click(sender As Object, e As EventArgs) Handles reset.Click
-        tiempo_crono = 0
+        elapsed = TimeSpan.Zero
         Timer3.Enabled = False
-        tiempo.Text = "0"
+        tiempo.Text = "00:00:00.0"
+        boton_start = False
+        start.Text = "start"
     End Sub
 
     Private Sub Timer3_Tick(sender As Object, e As EventArgs) Handles Timer3.Tick
-        tiempo_crono = tiempo_crono + 1
-        tiempo.text = tiempo_crono.ToString()
+        Dim current = elapsed + (DateTime.Now - startTime)
+        tiempo.Text = current.ToString("hh\:mm\:ss\.ff")
 
     End Sub
 
@@ -157,5 +159,17 @@
             Panel1.Visible = False
         End If
 
+    End Sub
+
+    Private Sub Temporizador_Paint(sender As Object, e As PaintEventArgs) Handles Temporizador.Paint
+
+    End Sub
+
+    Private Sub PictureBox3_Click(sender As Object, e As EventArgs) Handles PictureBox3.Click
+        If Temporizador.Visible = False Then
+            Temporizador.Visible = True
+        ElseIf Temporizador.Visible = True Then
+            Temporizador.Visible = False
+        End If
     End Sub
 End Class
