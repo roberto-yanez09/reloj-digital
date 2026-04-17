@@ -211,8 +211,8 @@
         If tiempoRestante.TotalMilliseconds > 0 Then
             tiempoRestante = tiempoRestante.Subtract(TimeSpan.FromMilliseconds(Timer4.Interval))
             Label4.Text = tiempoRestante.ToString("mm\:ss")
-        ElseIf
-                Timer4.Enabled = False
+        Else
+            Timer4.Enabled = False
             temporizadorActivo = False
             tiempoRestante = TimeSpan.Zero
             Label4.Text = "00:00"
